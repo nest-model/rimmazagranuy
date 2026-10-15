@@ -11,6 +11,7 @@
    ===================================================================== */
 
 import type { Photo, Video, GalleryItem, Review, Pkg, Fact, ContactLink } from './types';
+import { uploaded } from './uploads';
 
 /* ---------- Медиа: фото ---------- */
 export const photos = {
@@ -54,14 +55,14 @@ export const videos = {
     orientation: 'vertical',
   },
   // ↓ Заглушки: когда появится ролик — впишите src (и poster, если есть).
-  forum: {
+  forum: uploaded.forumVideo ? { ...uploaded.forumVideo, id: 'forum', title: 'Форум event-специалистов', orientation: 'horizontal' } : {
     id: 'forum',
     src: '',
     title: 'Форум event-специалистов',
     caption: 'Здесь будет видео с форума',
     orientation: 'horizontal',
   },
-  agency: {
+  agency: uploaded.agencyVideo ? { ...uploaded.agencyVideo, id: 'agency', title: 'Агентство «За гранью»', orientation: 'horizontal' } : {
     id: 'agency',
     src: '',
     title: 'Агентство «За гранью»',
@@ -114,6 +115,8 @@ export const reels = {
     { video: videos.corporate, label: 'Новогодний корпоратив' },
     { video: videos.forum, label: 'Форум event-специалистов' },
     { video: videos.agency, label: 'Агентство «За гранью»' },
+    // + всё из папки uploads/videos
+    ...uploaded.videos.map((v) => ({ video: v, label: v.title })),
   ],
 };
 
@@ -155,6 +158,8 @@ export const galleryIntro = {
 
 // Порядок = порядок на сайте. Первые `visible` видны сразу, остальные по кнопке.
 export const gallery: GalleryItem[] = [
+  // сначала — всё из папки uploads/gallery
+  ...uploaded.gallery.map((photo) => ({ type: 'photo' as const, photo, category: 'event' as const, size: 'm' as const })),
   { type: 'photo', photo: photos.standing, category: 'portrait', size: 'm' },
   { type: 'photo', photo: photos.corpMic, category: 'corporate', size: 'm' },
   { type: 'photo', photo: photos.laugh, category: 'portrait', size: 'm' },
@@ -294,7 +299,7 @@ export const forum = {
   ],
   video: videos.forum,
   // Фото с форума: добавьте объекты Photo сюда. Пока пусто — показываются заглушки.
-  photos: [] as Photo[],
+  photos: uploaded.forum as Photo[],
 };
 
 /* ---------- Отзывы ---------- */
@@ -394,7 +399,7 @@ export const agency = {
   servicesNote: 'Всё обсуждаемо: формат собираем под ваш праздник.',
   video: videos.agency,
   photosTitle: 'С мероприятий агентства',
-  photos: [photos.weddingHall, photos.weddingAisle, photos.weddingGuests, photos.weddingTeam],
+  photos: [...uploaded.agency, photos.weddingHall, photos.weddingAisle, photos.weddingGuests, photos.weddingTeam],
 };
 
 /* ---------- Финальная кнопка ---------- */
