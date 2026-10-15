@@ -33,6 +33,15 @@ export const photos = {
   corpMic: { src: 'media/photos/corporate-mic.webp', alt: 'Римма с микрофоном общается с гостем', ratio: '9/16', pos: '55% 35%', caption: 'Живой интерактив' },
   corpStage: { src: 'media/photos/corporate-stage.webp', alt: 'Римма ведёт вечер на сцене', ratio: '9/16', pos: '35% 35%' },
   corpDress: { src: 'media/photos/corporate-dress.webp', alt: 'Римма в голубом платье ведёт праздник', ratio: '9/16', pos: '50% 30%' },
+  forumGroup: { src: 'media/photos/forum-group.webp', alt: 'Общее фото участников форума в зале', ratio: '16/9', pos: '50% 50%', caption: 'Все участники форума' },
+  forumHosts: { src: 'media/photos/forum-stage-hosts.webp', alt: 'Организаторы форума с микрофоном на сцене', ratio: '16/9', pos: '50% 30%', caption: 'На сцене форума' },
+  forumStage: { src: 'media/photos/forum-stage.webp', alt: 'Выступление на сцене на фоне логотипа «За гранью»', ratio: '16/9', pos: '50% 40%', caption: 'Сцена «За гранью»' },
+  forumHall: { src: 'media/photos/forum-hall.webp', alt: 'Полный зал участников форума', ratio: '16/9', pos: '50% 50%', caption: 'Полный зал' },
+  forumBadge: { src: 'media/photos/forum-badge.webp', alt: 'Бейдж участника форума', ratio: '16/9', pos: '50% 50%', caption: 'Бейдж участника' },
+  forumDetails: { src: 'media/photos/forum-details.webp', alt: 'Брендированные десерты на форуме', ratio: '16/9', pos: '50% 50%', caption: 'Детали' },
+  forumDance: { src: 'media/photos/forum-dance.webp', alt: 'Участники форума танцуют', ratio: '16/9', pos: '50% 40%', caption: 'Форум' },
+  forumHugs: { src: 'media/photos/forum-hugs.webp', alt: 'Участники форума обнимаются', ratio: '16/9', pos: '50% 40%', caption: 'Форум' },
+  forumShow: { src: 'media/photos/forum-show.webp', alt: 'Шоу на сцене форума', ratio: '16/9', pos: '50% 50%', caption: 'Форум' },
   corpHost: { src: 'media/photos/corporate-host.webp', alt: 'Римма с микрофоном на фоне новогоднего декора', ratio: '9/16', pos: '50% 30%' },
 } satisfies Record<string, Photo>;
 
@@ -57,9 +66,10 @@ export const videos = {
   // ↓ Заглушки: когда появится ролик — впишите src (и poster, если есть).
   forum: uploaded.forumVideo ? { ...uploaded.forumVideo, id: 'forum', title: 'Форум event-специалистов', orientation: 'horizontal' } : {
     id: 'forum',
-    src: '',
+    src: 'media/video/forum.mp4',
+    poster: 'media/video/forum-poster.webp',
     title: 'Форум event-специалистов',
-    caption: 'Здесь будет видео с форума',
+    caption: '250 участников',
     orientation: 'horizontal',
   },
   agency: uploaded.agencyVideo ? { ...uploaded.agencyVideo, id: 'agency', title: 'Агентство «За гранью»', orientation: 'horizontal' } : {
@@ -161,6 +171,9 @@ export const galleryIntro = {
 export const gallery: GalleryItem[] = [
   // сначала — всё из папки uploads/gallery
   ...uploaded.gallery.map((photo) => ({ type: 'photo' as const, photo, category: 'event' as const, size: 'm' as const })),
+  { type: 'photo', photo: photos.forumDance, category: 'event', size: 'm' },
+  { type: 'photo', photo: photos.forumHugs, category: 'event', size: 'm' },
+  { type: 'photo', photo: photos.forumShow, category: 'event', size: 'm' },
   { type: 'photo', photo: photos.standing, category: 'portrait', size: 'm' },
   { type: 'photo', photo: photos.corpMic, category: 'corporate', size: 'm' },
   { type: 'photo', photo: photos.laugh, category: 'portrait', size: 'm' },
@@ -300,7 +313,7 @@ export const forum = {
   ],
   video: videos.forum,
   // Фото с форума: добавьте объекты Photo сюда. Пока пусто — показываются заглушки.
-  photos: uploaded.forum as Photo[],
+  photos: [photos.forumGroup, photos.forumHosts, photos.forumStage, photos.forumHall, photos.forumBadge, photos.forumDetails, ...uploaded.forum] as Photo[],
 };
 
 /* ---------- Отзывы ---------- */
