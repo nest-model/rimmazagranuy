@@ -64,9 +64,10 @@ export const videos = {
   },
   agency: uploaded.agencyVideo ? { ...uploaded.agencyVideo, id: 'agency', title: 'Агентство «За гранью»', orientation: 'horizontal' } : {
     id: 'agency',
-    src: '',
+    src: 'media/video/za-granyu.mp4',
+    poster: 'media/video/za-granyu-poster.webp',
     title: 'Агентство «За гранью»',
-    caption: 'Здесь будет ролик об агентстве',
+    caption: 'Команда агентства',
     orientation: 'horizontal',
   },
 } satisfies Record<string, Video>;

@@ -56,16 +56,17 @@ export function VideoPlayer({ video, tone = 'light', className = '' }: Props) {
         ) : (
           <video
             ref={ref}
-            src={asset(video.src)}
-            poster={asset(video.poster)}
-            preload="none"
+            // без обложки показываем первый кадр самого видео
+            src={video.poster ? asset(video.src) : `${asset(video.src)}#t=0.5`}
+            poster={asset(video.poster) || undefined}
+            preload={video.poster ? 'none' : 'metadata'}
             playsInline
             controls={started}
             onPlay={() => window.dispatchEvent(new CustomEvent(EVT, { detail: video.id }))}
           />
         )}
         {!started && (
-          <button type="button" className="video__cover" onClick={start} aria-label={`Смотреть видео: ${video.title}`}>
+          <button type="button" className={`video__cover ${video.poster ? '' : 'video__cover--clear'}`} onClick={start} aria-label={`Смотреть видео: ${video.title}`}>
             {video.poster && <img src={asset(video.poster)} alt="" loading="lazy" decoding="async" />}
             <span className="video__play" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg>
