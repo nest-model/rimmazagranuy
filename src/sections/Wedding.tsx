@@ -10,7 +10,7 @@ export function Wedding() {
         <h2 id="wedding-title" className="h2">{wedding.title}</h2>
         <div className="wedding__grid">
           <div className="wedding__media">
-            <VideoPlayer video={wedding.video} tone="dark" />
+            <VideoPlayer video={wedding.video} tone="dark" bare />
           </div>
           <div className="wedding__text">
             {wedding.intro.map((t) => <p key={t} className="lead">{t}</p>)}

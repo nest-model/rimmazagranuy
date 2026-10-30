@@ -307,7 +307,7 @@ export const wedding = {
   verdictLead: 'Главный показатель хорошо организованной свадьбы для меня:',
   verdictA: 'когда за кадром было огромное количество работы…',
   verdictB: 'а в кадре остались только счастливые люди.',
-  video: { id: 'wedding-case', src: 'media/video/corporate-party.mp4', poster: 'media/video/wedding-case-poster.webp', title: 'Свадьба под ключ', orientation: 'vertical' } as Video,
+  video: { id: 'wedding-case', src: 'media/video/corporate-party.mp4', poster: 'media/video/corporate-party-poster.webp', posterPos: '50% 25%', title: 'Свадьба под ключ', orientation: 'vertical' } as Video,
   photos: [photos.caseWalk, photos.caseDress],
 };
 
