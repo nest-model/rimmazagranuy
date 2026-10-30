@@ -9,7 +9,7 @@ export function Intro() {
       {/* белый фон фотографии растянут на весь блок */}
       <div className="intro__band">
         <div className="wrap intro__grid">
-          <Frame photo={intro.postPhoto} ratio="4/5" className="intro__photo" />
+          <Frame photo={intro.postPhoto} className="intro__photo" />
           <div className="intro__text">
             <h2 id="intro-title" className="h2">{intro.title}</h2>
             {intro.story.map((t) => <p key={t}>{t}</p>)}

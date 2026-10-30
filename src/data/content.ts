@@ -20,7 +20,7 @@ export const photos = {
   laugh: { src: 'media/photos/rimma-laugh.webp', alt: 'Римма смеётся и показывает язык', ratio: '1265/1600', pos: '40% 25%' },
   portrait: { src: 'media/photos/rimma-portrait.webp', alt: 'Портрет Риммы со скрещёнными руками и золотым браслетом', ratio: '1153/1600', pos: '50% 25%' },
   eye: { src: 'media/photos/rimma-eye.webp', alt: 'Крупный план: глаз и золотая серьга', ratio: '1021/1600', pos: '60% 40%' },
-  earring: { src: 'media/photos/rimma-earring.webp', alt: 'Римма в профиль, золотая серьга-кольца', ratio: '1171/1600', pos: '50% 30%' },
+  earring: { src: 'media/photos/rimma-earring.webp', alt: 'Римма в профиль, золотая серьга-кольца', ratio: '1171/1600', pos: '50% 0%' },
   // кадры с мероприятий (из роликов)
   weddingAisle: { src: 'media/photos/wedding-aisle.webp', alt: 'Папа ведёт невесту к выездной церемонии', ratio: '9/16', pos: '50% 50%', caption: 'Выездная церемония' },
   weddingHall: { src: 'media/photos/wedding-hall.webp', alt: 'Оформленный зал для церемонии', ratio: '9/16', pos: '50% 60%', caption: 'Декор и оформление' },
@@ -164,7 +164,7 @@ export const intro = {
   postPhoto: photos.earring,
   // Абзацы истории. Можно дописывать — каждый элемент = абзац.
   story: [
-    'Привет! Я Римма Сковородникова — ведущая, организатор мероприятий и основатель агентства «За гранью». Организовала и провела уже 1000+ мероприятий.',
+    'Привет! Я Римма Сковородникова — ведущая, куратор event Sokratilin academy, сертифицированный специалист «Sokolova wedding school», организатор мероприятий и основатель агентства «За гранью». Организовала и провела уже 1000+ мероприятий.',
     'Мой авторский стиль — это баланс элегантности, импровизации и живого общения. Я создаю атмосферу, в которой каждое событие звучит по-настоящему!',
   ],
   factsLead: 'Опыт',
@@ -278,8 +278,8 @@ export const packages: Pkg[] = [
 
 /* ---------- Свадьба под ключ ---------- */
 export const wedding = {
-  eyebrow: 'Организация свадьбы под ключ',
-  title: 'Свадьба под ключ. А что это вообще значит?',
+  eyebrow: 'Организация свадьбы «под ключ»',
+  title: 'Свадьба «под ключ». А что это вообще значит?',
   intro: [
     'Для пары этот день — про любовь, семью, близких людей, слёзы, смех, объятия и первое семейное «МЫ».',
     'А для меня он начинается задолго до даты.',
@@ -318,8 +318,8 @@ export const corporate = {
   words: ['ярко', 'феерично', 'незабываемо', 'весело', 'интересно', 'душевно', 'и с изюминкой'],
   text: 'Для каждой компании я индивидуально подбираю подрядчиков: музыкантов, шоу-номера, технику и всё, что нужно именно вашему коллективу.',
   // на карточке видео в этом блоке — своя обложка (хоровод) и без подписи
-  video: { ...videos.corporate, poster: 'media/photos/corp-horovod.webp', posterPos: '58% 50%' },
-  photos: [photos.corpGuitar, photos.corpHost],
+  video: { id: 'corporate-party', src: 'media/video/corporate-party.mp4', poster: 'media/video/corporate-party-poster.webp', posterPos: '50% 25%', title: 'Корпоративные мероприятия', orientation: 'vertical' } as Video,
+  photos: [photos.corpGuitar],
 };
 
 /* ---------- Форум ---------- */

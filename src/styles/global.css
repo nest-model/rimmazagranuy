@@ -183,9 +183,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .intro__photo .frame__box {
   border-radius: 0; background: transparent;
   /* края фото растворяются в белом фоне блока */
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%), linear-gradient(to right, transparent 0%, #000 8%, #000 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 72%, transparent 100%), linear-gradient(to right, transparent 0%, #000 8%, #000 90%, transparent 100%);
   -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%), linear-gradient(to right, transparent 0%, #000 8%, #000 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 72%, transparent 100%), linear-gradient(to right, transparent 0%, #000 8%, #000 90%, transparent 100%);
   mask-composite: intersect;
 }
 .intro__photo { max-width: 460px; width: 100%; justify-self: center; }
@@ -336,7 +336,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .pkg__list li { position: relative; padding-left: 18px; font-size: 0.875rem; line-height: 1.5; }
 .pkg__list li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 6px; height: 6px; border-radius: 50%; background: var(--fg); }
 .pkg__extras { display: grid; gap: 4px; font-size: 0.8125rem; color: var(--fg-2); }
-.pkg__from { font-family: var(--f-accent); font-style: italic; font-weight: 500; font-size: 0.62em; text-transform: none; color: var(--fg-2); margin-right: 0.08em; }
+.pkg__from { font-family: var(--f-body); font-style: normal; font-weight: 500; font-size: 0.5em; text-transform: none; color: #cfcfcf; margin-right: 0.2em; }
 .pkg__price { white-space: nowrap; font-family: var(--f-display); font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem); text-align: center; font-variant-numeric: lining-nums; }
 .pkg__cta { align-self: center; }
 .services__note { margin-top: 32px; color: var(--fg-2); font-size: 0.9375rem; }
@@ -400,11 +400,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @keyframes tick { to { transform: translateX(-50%); } }
 .final__in { display: grid; gap: 8px; align-items: end; padding-top: clamp(56px, 7vw, 100px); }
 .final__text { display: grid; gap: 28px; justify-items: center; text-align: center; padding-bottom: clamp(48px, 6vw, 96px); }
-.final__line { font-family: var(--f-display); font-weight: 500; text-transform: uppercase; font-size: clamp(1.4rem, 0.8rem + 2.6vw, 3.3rem); line-height: 1.1; max-width: 16em; }
+.final__line { font-family: var(--f-display); font-weight: 500; text-transform: uppercase; font-size: clamp(1.4rem, 0.8rem + 2.6vw, 3.3rem); line-height: 1.24; max-width: 16em; }
 .final__accent {
-  font-family: var(--f-accent); font-style: italic; font-weight: 500; text-transform: none;
-  font-size: 1.3em; line-height: 0.9; letter-spacing: 0; white-space: nowrap;
-  background: linear-gradient(currentColor, currentColor) 0 92% / 100% 1px no-repeat; padding-bottom: 0.06em;
+  font-style: normal; color: var(--cream); background: var(--ink);
+  padding: 0 0.2em 0.04em; border-radius: 0.1em; line-height: 1;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
 .final__cut { height: clamp(320px, 60vw, 480px); width: auto; justify-self: center; margin-bottom: -2px; }
 @media (min-width: 900px) {
