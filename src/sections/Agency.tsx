@@ -27,7 +27,7 @@ export function Agency() {
         <p className="agency__note">{agency.servicesNote}</p>
         <h3 className="agency__ph">{agency.photosTitle}</h3>
         <div className="agency__photos">
-          {agency.photos.map((p) => <Frame key={p.src} photo={p} ratio="3/4" group={agency.photos} showCaption />)}
+          {agency.photos.map((p) => <Frame key={p.src} photo={p} ratio="3/4" group={agency.photos} />)}
         </div>
       </div>
     </section>

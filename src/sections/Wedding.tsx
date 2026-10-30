@@ -19,7 +19,7 @@ export function Wedding() {
             </ul>
             <p className="lead">{wedding.tail}</p>
             <div className="wedding__photos">
-              {wedding.photos.map((p) => <Frame key={p.src} photo={p} ratio="4/5" group={wedding.photos} showCaption />)}
+              {wedding.photos.map((p) => <Frame key={p.src} photo={p} ratio="4/5" group={wedding.photos} />)}
             </div>
           </div>
         </div>

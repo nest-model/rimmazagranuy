@@ -43,24 +43,54 @@ export const photos = {
   forumHugs: { src: 'media/photos/forum-hugs.webp', alt: 'Участники форума обнимаются', ratio: '16/9', pos: '50% 40%', caption: 'Форум' },
   forumShow: { src: 'media/photos/forum-show.webp', alt: 'Шоу на сцене форума', ratio: '16/9', pos: '50% 50%', caption: 'Форум' },
   corpHost: { src: 'media/photos/corporate-host.webp', alt: 'Римма с микрофоном на фоне новогоднего декора', ratio: '9/16', pos: '50% 30%' },
+
+  // ---- обновление 30.10.2026 ----
+  heroRimma: { src: 'media/photos/hero-rimma.webp', alt: 'Римма Сковородникова улыбается, руки в карманах', ratio: '1066/1600', pos: '50% 30%' },
+  // галерея «Фото с праздников»
+  g01: { src: 'media/photos/gallery-01.webp', alt: 'Римма с гостями праздника 8 Марта на сцене', ratio: '1600/1067', pos: '55% 40%' },
+  g02: { src: 'media/photos/gallery-02.webp', alt: 'Гости вечеринки в стиле 90-х вместе с Риммой', ratio: '1600/1066', pos: '50% 40%' },
+  g03: { src: 'media/photos/gallery-03.webp', alt: 'Гости поют вместе с кавер-группой', ratio: '1600/1067', pos: '40% 40%' },
+  g04: { src: 'media/photos/gallery-04.webp', alt: 'Римма с гостьей у новогодней ёлки', ratio: '1066/1600', pos: '50% 35%' },
+  g05: { src: 'media/photos/gallery-05.webp', alt: 'Римма ведёт праздник, гостьи танцуют', ratio: '1600/1067', pos: '45% 40%' },
+  g06: { src: 'media/photos/gallery-06.webp', alt: 'Римма с гостями на торжестве', ratio: '1600/1067', pos: '50% 35%' },
+  g07: { src: 'media/photos/gallery-07.webp', alt: 'Римма с микрофоном приветствует гостей за столом', ratio: '1600/1066', pos: '55% 35%' },
+  g08: { src: 'media/photos/gallery-08.webp', alt: 'Римма с микрофоном пожимает руку гостю', ratio: '1600/1066', pos: '55% 35%' },
+  g09: { src: 'media/photos/gallery-09.webp', alt: 'Римма ведёт корпоративное мероприятие Альфа-Банка', ratio: '1280/851', pos: '40% 40%' },
+  g10: { src: 'media/photos/gallery-10.webp', alt: 'Гости банкета аплодируют танцующей паре', ratio: '1600/1067', pos: '72% 40%' },
+  // свадьба под ключ
+  caseWalk: { src: 'media/photos/case-walk.webp', alt: 'Римма с папкой сценария на выездной церемонии', ratio: '1067/1600', pos: '50% 15%' },
+  caseDress: { src: 'media/photos/case-dress.webp', alt: 'Координатор «За гранью» помогает невесте с платьем', ratio: '1067/1600', pos: '55% 40%' },
+  // корпоративы
+  corpHorovod: { src: 'media/photos/corp-horovod.webp', alt: 'Гости корпоратива танцуют хороводом', ratio: '1600/1067', pos: '55% 50%' },
+  corpGuitar: { src: 'media/photos/corp-guitar.webp', alt: 'Гости корпоратива поют вместе с музыкантом', ratio: '1600/1067', pos: '55% 45%' },
+  // форум
+  forum1: { src: 'media/photos/forum-1.webp', alt: 'Участник форума с фонариком телефона', ratio: '1067/1600', pos: '50% 30%' },
+  forum2: { src: 'media/photos/forum-2.webp', alt: 'Римма у торта и эклеров «За гранью»', ratio: '1067/1600', pos: '50% 40%' },
+  forum3: { src: 'media/photos/forum-3.webp', alt: 'Команда форума event-специалистов', ratio: '1600/1041', pos: '50% 40%' },
+  forum4: { src: 'media/photos/forum-4.webp', alt: 'Зал форума под люстрами, участники подняли руки', ratio: '1386/1600', pos: '50% 60%' },
+  forum5: { src: 'media/photos/forum-5.webp', alt: 'Общее фото участников форума', ratio: '1600/1063', pos: '50% 50%' },
+  forum6: { src: 'media/photos/forum-6.webp', alt: 'Организаторы форума в чёрном', ratio: '1067/1600', pos: '50% 18%' },
+  // агентство
+  agency1: { src: 'media/photos/agency-1.webp', alt: 'Молодожёны на фоне холодных фонтанов', ratio: '1600/1067', pos: '50% 60%' },
+  agency2: { src: 'media/photos/agency-2.webp', alt: 'Римма с молодожёнами у арки выездной церемонии', ratio: '1066/1600', pos: '50% 40%' },
+  agency3: { src: 'media/photos/agency-3.webp', alt: 'Общее фото гостей мероприятия агентства', ratio: '1600/1067', pos: '50% 45%' },
+  agency4: { src: 'media/photos/agency-4.webp', alt: 'Координаторы «За гранью» у цветочной арки', ratio: '1067/1600', pos: '50% 50%' },
 } satisfies Record<string, Photo>;
 
 /* ---------- Медиа: видео ---------- */
 export const videos = {
   wedding: {
     id: 'wedding',
-    src: 'media/video/wedding-turnkey.mp4',
-    poster: 'media/video/wedding-turnkey-poster.webp',
+    src: 'media/video/wedding.mp4',
+    poster: 'media/video/wedding-poster.webp',
     title: 'Свадьба под ключ',
-    caption: 'Один день, собранный с нуля',
     orientation: 'vertical',
   },
   corporate: {
     id: 'corporate',
-    src: 'media/video/corporate-ny-2025.mp4',
-    poster: 'media/video/corporate-ny-2025-poster.webp',
-    title: 'Новогодний корпоратив',
-    caption: 'Декабрь 2025',
+    src: 'media/video/corporate.mp4',
+    poster: 'media/video/corporate-poster.webp',
+    title: 'Корпоративные мероприятия',
     orientation: 'vertical',
   },
   // ↓ Заглушки: когда появится ролик — впишите src (и poster, если есть).
@@ -69,7 +99,6 @@ export const videos = {
     src: 'media/video/forum.mp4',
     poster: 'media/video/forum-poster.webp',
     title: 'Форум event-специалистов',
-    caption: '250 участников',
     orientation: 'horizontal',
   },
   agency: uploaded.agencyVideo ? { ...uploaded.agencyVideo, id: 'agency', title: 'Агентство «За гранью»', orientation: 'horizontal' } : {
@@ -77,7 +106,6 @@ export const videos = {
     src: 'media/video/za-granyu.mp4',
     poster: 'media/video/za-granyu-poster.webp',
     title: 'Агентство «За гранью»',
-    caption: 'Команда агентства',
     orientation: 'horizontal',
   },
 } satisfies Record<string, Video>;
@@ -105,15 +133,14 @@ export const contacts = {
 
 /* ---------- Первый экран ---------- */
 export const hero = {
-  // фото без фона (вырезано) — стоит в золотой арке
-  cutout: { src: 'media/photos/cut-portrait.webp', alt: 'Римма Сковородникова в чёрном костюме' },
+  photo: { src: 'media/photos/hero-rimma.webp', alt: 'Римма Сковородникова улыбается, руки в карманах' },
   role: 'ведущая и организатор мероприятий',
   cities: 'Липецк · Воронеж · Старый Оскол',
 };
 
 export const stats = [
   { value: '1000+', label: 'мероприятий организовала и провела' },
-  { value: '250', label: 'участников на моём форуме для event-специалистов' },
+  { value: '250+', label: 'участников на моём форуме для event-специалистов' },
   { value: 'ВДНХ', label: 'День Липецкой области на выставке «Россия», 2024' },
   { value: 'Финал', label: 'федерального проекта «Всем стендап»' },
 ];
@@ -122,9 +149,9 @@ export const stats = [
 export const reels = {
   title: 'Видео',
   items: [
-    { video: videos.wedding, label: 'Свадьба под ключ' },
-    { video: videos.corporate, label: 'Новогодний корпоратив' },
-    { video: videos.forum, label: 'Форум event-специалистов' },
+    { video: videos.wedding, label: 'Свадьба' },
+    { video: videos.corporate, label: 'Корпоративные мероприятия' },
+    { video: videos.forum, label: 'Организация форумов, конференций и мастер-классов' },
     { video: videos.agency, label: 'Агентство «За гранью»' },
     // + всё из папки uploads/videos
     ...uploaded.videos.map((v) => ({ video: v, label: v.title })),
@@ -140,7 +167,7 @@ export const intro = {
     'Привет! Я Римма Сковородникова — ведущая, организатор мероприятий и основатель агентства «За гранью». Организовала и провела уже 1000+ мероприятий.',
     'Мой авторский стиль — это баланс элегантности, импровизации и живого общения. Я создаю атмосферу, в которой каждое событие звучит по-настоящему!',
   ],
-  factsLead: 'Немного фактов обо мне:',
+  factsLead: 'Опыт',
   quote: 'Про меня говорят: «Уютная, как плед, и родная, как объятия мамы».',
   inviteBefore: 'Расскажите о своём празднике — ',
   inviteLink: 'рассчитаем стоимость',
@@ -153,7 +180,7 @@ export const facts: Fact[] = [
   { tag: 'ТВ', text: 'Благодаря одной из своих пар работала с проектом «4 свадьбы» на телеканале «Пятница».' },
   { tag: 'ТВ', text: 'Была участницей «Давай поженимся» — знаю, как выглядит Первый канал изнутри.' },
   { tag: 'Кино', text: 'Снималась в фильме «Живой» — ищите меня в титрах.' },
-  { tag: 'Сцена', text: 'Вместе с Владимиром Тулиновым вела выставку «Моя большая свадьба».' },
+  { tag: 'Премии', text: 'Стала победителем в номинации «Лучший кейс Sokratilin academy».' },
   { tag: 'Медиа', text: 'Работала главредом и брала интервью у десятков российских звёзд и политиков.' },
   { tag: 'Клуб', text: 'Была арт-директором ночного клуба — организовала сотни диско-вечеринок.' },
   { tag: 'Учёба', text: 'Имею сертификаты и дипломы тренингов, мастер-классов и форумов: продажи, психология, маркетинг.' },
@@ -171,33 +198,31 @@ export const galleryIntro = {
 export const gallery: GalleryItem[] = [
   // сначала — всё из папки uploads/gallery
   ...uploaded.gallery.map((photo) => ({ type: 'photo' as const, photo, category: 'event' as const, size: 'm' as const })),
-  { type: 'photo', photo: photos.forumDance, category: 'event', size: 'm' },
-  { type: 'photo', photo: photos.forumHugs, category: 'event', size: 'm' },
-  { type: 'photo', photo: photos.forumShow, category: 'event', size: 'm' },
+  { type: 'photo', photo: photos.g01, category: 'event', size: 'm' },
+  { type: 'photo', photo: photos.g04, category: 'event', size: 'm' },
+  { type: 'photo', photo: photos.g02, category: 'event', size: 'm' },
   { type: 'photo', photo: photos.standing, category: 'portrait', size: 'm' },
-  { type: 'photo', photo: photos.corpMic, category: 'corporate', size: 'm' },
+  { type: 'photo', photo: photos.g07, category: 'event', size: 'm' },
+  { type: 'photo', photo: photos.g03, category: 'event', size: 'm' },
   { type: 'photo', photo: photos.laugh, category: 'portrait', size: 'm' },
-  { type: 'photo', photo: photos.weddingFireworks, category: 'wedding', size: 'm' },
+  { type: 'photo', photo: photos.g08, category: 'corporate', size: 'm' },
+  { type: 'photo', photo: photos.g05, category: 'event', size: 'm' },
   { type: 'photo', photo: photos.portrait, category: 'portrait', size: 'm' },
-  { type: 'photo', photo: photos.corpDress, category: 'corporate', size: 'm' },
-  { type: 'photo', photo: photos.weddingAisle, category: 'wedding', size: 'm' },
+  { type: 'photo', photo: photos.g09, category: 'corporate', size: 'm' },
+  { type: 'photo', photo: photos.g06, category: 'event', size: 'm' },
   { type: 'photo', photo: photos.eye, category: 'portrait', size: 'm' },
-  { type: 'photo', photo: photos.corpHost, category: 'corporate', size: 'm' },
-  { type: 'photo', photo: photos.weddingGuests, category: 'wedding', size: 'm' },
-  { type: 'photo', photo: photos.corpStage, category: 'corporate', size: 'm' },
-  { type: 'photo', photo: photos.weddingHall, category: 'wedding', size: 'm' },
+  { type: 'photo', photo: photos.g10, category: 'event', size: 'm' },
   { type: 'photo', photo: photos.wall, category: 'portrait', size: 'm' },
-  { type: 'photo', photo: photos.weddingBehind, category: 'wedding', size: 'm' },
 ];
 
 /* ---------- Что вы получите ---------- */
 export const benefits = {
   title: 'Почему со мной легко',
   items: [
-    { title: '1000+ мероприятий опыта', text: 'От камерного юбилея до форума на 250 человек. Знаю, как сделать, чтобы гостям было легко и весело.' },
-    { title: 'Индивидуальная режиссура', text: 'Программа под вас, авторские интерактивы и шоу-номера. Без шаблонных конкурсов.' },
-    { title: 'Подрядчики под задачу', text: 'Для каждого события индивидуально подбираю подрядчиков: DJ, музыкантов, шоу, технику.' },
-    { title: 'Всегда на связи', text: 'Встречи и созвоны на всех этапах подготовки. Вы знаете, что происходит, и спокойно ждёте праздник.' },
+    { title: '1000+ мероприятий опыта', text: 'От уютного юбилея до масштабного форума. Сделаю, чтобы заказчику и гостям было легко и комфортно.' },
+    { title: 'Индивидуальная режиссура', text: 'Персонализированная программа, авторские интерактивы и шоу-номера без шаблонных конкурсов.' },
+    { title: 'Подрядчики под задачу', text: 'Для каждого события индивидуально подбираю подрядчиков: DJ, музыкантов, шоу, техническое оснащение, декор, фотографа, видеографа.' },
+    { title: 'Всегда на связи', text: 'Поддержка 24/7. Встречи и созвоны на всех этапах подготовки. Вы знаете, что происходит, и спокойно ждёте праздник.' },
   ],
 };
 
@@ -211,7 +236,7 @@ export const packages: Pkg[] = [
   {
     name: 'Стандартный',
     kind: 'Ведущая + DJ',
-    price: '67 000 ₽',
+    price: 'от 70 000 ₽',
     items: [
       'Встречи и созвоны в процессе работы',
       'Универсальная программа',
@@ -223,7 +248,7 @@ export const packages: Pkg[] = [
   {
     name: 'Комфорт',
     kind: 'Ведущая + DJ + режиссура',
-    price: '85 000 ₽',
+    price: 'от 85 000 ₽',
     featured: true,
     items: [
       'Встречи и созвоны в процессе работы',
@@ -239,7 +264,7 @@ export const packages: Pkg[] = [
   {
     name: 'Just Кайф',
     kind: 'Антиквиз под ключ',
-    price: '65 000 ₽',
+    price: 'от 65 000 ₽',
     items: [
       'Тематика игры формата антиквиз под любую концепцию и любой возраст участников',
       'Продолжительность — 3 часа',
@@ -283,7 +308,7 @@ export const wedding = {
   verdictA: 'когда за кадром было огромное количество работы…',
   verdictB: 'а в кадре остались только счастливые люди.',
   video: videos.wedding,
-  photos: [photos.weddingBehind, photos.weddingBackstage],
+  photos: [photos.caseWalk, photos.caseDress],
 };
 
 /* ---------- Корпоративы ---------- */
@@ -292,18 +317,19 @@ export const corporate = {
   lead: 'Корпоративы со мной — это всегда',
   words: ['ярко', 'феерично', 'незабываемо', 'весело', 'интересно', 'душевно', 'и с изюминкой'],
   text: 'Для каждой компании я индивидуально подбираю подрядчиков: музыкантов, шоу-номера, технику и всё, что нужно именно вашему коллективу.',
-  video: videos.corporate,
-  photos: [photos.corpStage, photos.corpHost],
+  // на карточке видео в этом блоке — своя обложка (хоровод) и без подписи
+  video: { ...videos.corporate, poster: 'media/photos/corp-horovod.webp', posterPos: '58% 50%' },
+  photos: [photos.corpGuitar, photos.corpHost],
 };
 
 /* ---------- Форум ---------- */
 export const forum = {
-  eyebrow: 'Моя гордость',
+  eyebrow: 'Мой личный проект',
   title: 'Форум для event-специалистов Черноземья',
-  number: '250',
+  number: '250+',
   numberLabel: 'участников',
   text: [
-    'Организовала и провела форум для event-специалистов на 250 человек. От идеи до воплощения в жизнь.',
+    'Организовала и провела форум для event-специалистов на 250+ человек. От идеи до воплощения в жизнь.',
     'Очень большой проект: сделала его не только в своём городе, но и в Белгородской области. Следующий — Воронеж.',
   ],
   route: [
@@ -313,7 +339,7 @@ export const forum = {
   ],
   video: videos.forum,
   // Фото с форума: добавьте объекты Photo сюда. Пока пусто — показываются заглушки.
-  photos: [photos.forumGroup, photos.forumHosts, photos.forumStage, photos.forumHall, photos.forumBadge, photos.forumDetails, ...uploaded.forum] as Photo[],
+  photos: [photos.forum1, photos.forum2, photos.forum3, photos.forum4, photos.forum5, photos.forum6, ...uploaded.forum] as Photo[],
 };
 
 /* ---------- Отзывы ---------- */
@@ -332,14 +358,6 @@ export const reviews: Review[] = [
     date: '1 октября',
     screenshot: 'media/reviews/review-wedding.webp',
     featured: true,
-  },
-  {
-    occasion: 'Мероприятие',
-    source: 'Отзыв ВКонтакте',
-    quote: 'Талант и профессионализм ведущей — отдельный вид искусства.',
-    author: 'Liliya Skovorodnikova',
-    date: '28 июля 2025',
-    screenshot: 'media/reviews/review-liliya.webp',
   },
   {
     occasion: 'Антиквиз',
@@ -413,20 +431,21 @@ export const agency = {
   servicesNote: 'Всё обсуждаемо: формат собираем под ваш праздник.',
   video: videos.agency,
   photosTitle: 'С мероприятий агентства',
-  photos: [...uploaded.agency, photos.weddingHall, photos.weddingAisle, photos.weddingGuests, photos.weddingTeam],
+  photos: [...uploaded.agency, photos.agency1, photos.agency2, photos.agency3, photos.agency4],
 };
 
 /* ---------- Финальная кнопка ---------- */
 export const finalCta = {
   cutout: { src: 'media/photos/cut-standing.webp', alt: 'Римма в полный рост' },
-  line: 'Давайте сделаем ваш праздник таким, о котором потом пишут',
+  // [выделенная часть] — подсвечивается курсивом
+  line: 'Давайте создадим [ваше неповторимое] событие',
   button: 'Рассчитать стоимость',
 };
 
 /* ---------- Контакты ---------- */
 export const contactSection = {
-  title: 'Обсудим ваш праздник?',
-  text: 'Позвоните, напишите ВКонтакте или на почту — отвечу и предложу формат под вашу дату.',
+  title: 'Обсудим ваше событие?',
+  text: 'Позвоните, напишите ВКонтакте или на почту\u00A0— я обязательно отвечу.',
 };
 
 /* ---------- Квиз «Рассчитать стоимость» ----------

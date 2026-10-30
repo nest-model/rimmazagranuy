@@ -5,13 +5,13 @@ import { Placeholder } from './Placeholder';
 
 const EVT = 'rimma:video-play';
 
-type Props = { video: Video; tone?: 'light' | 'dark'; className?: string };
+type Props = { video: Video; tone?: 'light' | 'dark'; className?: string; /** без названия на обложке */ bare?: boolean };
 
 /**
  * Видео с обложкой. Звук не включается сам, одновременно играет только одно видео.
  * Поддерживает локальный файл (src) и внешнее видео (embed).
  */
-export function VideoPlayer({ video, tone = 'light', className = '' }: Props) {
+export function VideoPlayer({ video, tone = 'light', className = '', bare = false }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
   const [started, setStarted] = useState(false);
   const ratio = video.orientation === 'vertical' ? '9/16' : '16/9';
@@ -67,14 +67,16 @@ export function VideoPlayer({ video, tone = 'light', className = '' }: Props) {
         )}
         {!started && (
           <button type="button" className={`video__cover ${video.poster ? '' : 'video__cover--clear'}`} onClick={start} aria-label={`Смотреть видео: ${video.title}`}>
-            {video.poster && <img src={asset(video.poster)} alt="" loading="lazy" decoding="async" />}
+            {video.poster && <img src={asset(video.poster)} alt="" loading="lazy" decoding="async" style={video.posterPos ? { objectPosition: video.posterPos } : undefined} />}
             <span className="video__play" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg>
             </span>
-            <span className="video__meta">
-              <span className="video__title">{video.title}</span>
-              {video.caption && <span className="video__cap">{video.caption}</span>}
-            </span>
+            {!bare && (
+              <span className="video__meta">
+                <span className="video__title">{video.title}</span>
+                {video.caption && <span className="video__cap">{video.caption}</span>}
+              </span>
+            )}
           </button>
         )}
       </div>

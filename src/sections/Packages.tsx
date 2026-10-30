@@ -15,7 +15,7 @@ export function Packages() {
               </header>
               <ul className="pkg__list">{p.items.map((i) => <li key={i}>{i}</li>)}</ul>
               {p.extras.length > 0 && <ul className="pkg__extras">{p.extras.map((e) => <li key={e}>+ {e}</li>)}</ul>}
-              <p className="pkg__price">{p.price}</p>
+              <p className="pkg__price">{p.price.startsWith('от ') ? <><span className="pkg__from">от</span> {p.price.slice(3)}</> : p.price}</p>
               <QuizButton pkg={p.name} label="Рассчитать стоимость" className="btn btn--gold btn--sm pkg__cta" />
             </article>
           ))}

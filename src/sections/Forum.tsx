@@ -10,7 +10,7 @@ export function Forum() {
         <div className="forum__card">
           <div className="forum__top">
             <div className="forum__num" aria-hidden="true">
-              <span className="forum__digits">{forum.number}</span>
+              <span className="forum__digits">{forum.number.replace(/\+$/, '')}{forum.number.endsWith('+') && <span className="forum__plus">+</span>}</span>
               <span className="forum__unit">{forum.numberLabel}</span>
             </div>
             <div className="forum__text">
@@ -32,7 +32,7 @@ export function Forum() {
             <VideoPlayer video={forum.video} tone="dark" />
             <div className="forum__photos">
               {forum.photos.length > 0
-                ? forum.photos.map((p) => <Frame key={p.src} photo={p} ratio="4/3" group={forum.photos} showCaption />)
+                ? forum.photos.map((p) => <Frame key={p.src} photo={p} ratio="4/3" group={forum.photos} />)
                 : ['Фото с форума в Липецке', 'Фото с форума в Белгородской области'].map((l) => <Placeholder key={l} label={l} hint="место под фото" ratio="16/9" tone="dark" />)}
             </div>
           </div>

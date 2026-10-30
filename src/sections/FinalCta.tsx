@@ -3,6 +3,12 @@ import { asset } from '../lib/asset';
 import { QuizButton } from '../components/Quiz';
 
 /* Бегущая строка из слов гостей + призыв. */
+/** 'Давайте создадим [ваше неповторимое] событие' → часть в скобках выделяется курсивом */
+const accent = (line: string) =>
+  line.split(/(\[[^\]]+\])/).map((part, i) =>
+    part.startsWith('[') ? <em key={i} className="final__accent">{part.slice(1, -1)}</em> : part,
+  );
+
 export function FinalCta() {
   const words = [...reviewsIntro.chips, ...reviewsIntro.chips];
   return (
@@ -12,7 +18,7 @@ export function FinalCta() {
       </div>
       <div className="wrap final__in">
         <div className="final__text">
-          <p className="final__line">{finalCta.line}</p>
+          <p className="final__line">{accent(finalCta.line)}</p>
           <QuizButton label={finalCta.button} className="btn btn--black btn--lg" />
         </div>
         <img className="final__cut" src={asset(finalCta.cutout.src)} alt={finalCta.cutout.alt} loading="lazy" />

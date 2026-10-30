@@ -5,9 +5,10 @@ import { useQuiz } from '../components/Quiz';
 export function Intro() {
   const { openQuiz } = useQuiz();
   return (
-    <section className="intro section" id="about" aria-labelledby="intro-title">
-      <div className="wrap">
-        <div className="intro__grid">
+    <section className="intro" id="about" aria-labelledby="intro-title">
+      {/* белый фон фотографии растянут на весь блок */}
+      <div className="intro__band">
+        <div className="wrap intro__grid">
           <Frame photo={intro.postPhoto} ratio="4/5" className="intro__photo" />
           <div className="intro__text">
             <h2 id="intro-title" className="h2">{intro.title}</h2>
@@ -20,6 +21,8 @@ export function Intro() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="wrap intro__facts">
         <h3 className="facts__title">{intro.factsLead}</h3>
         <ul className="facts">
           {facts.map((f) => (

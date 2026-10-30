@@ -13,6 +13,8 @@ export type Video = {
   /** локальный файл 'media/video/x.mp4'. Пусто — показывается заглушка */
   src: string;
   poster?: string;
+  /** кадрирование обложки (object-position), напр. '55% 50%' */
+  posterPos?: string;
   /** внешнее видео (VK / YouTube / Rutube): ссылка для встраивания iframe */
   embed?: string;
   title: string;

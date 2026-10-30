@@ -15,7 +15,7 @@ export function Corporate() {
           <p className="lead">{corporate.text}</p>
         </div>
         <div className="corporate__media">
-          <VideoPlayer video={corporate.video} tone="dark" className="corporate__video" />
+          <VideoPlayer video={corporate.video} tone="dark" className="corporate__video" bare />
           <div className="corporate__stills">
             {corporate.photos.map((p) => <Frame key={p.src} photo={p} ratio="3/4" group={corporate.photos} />)}
           </div>
